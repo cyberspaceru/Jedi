@@ -1,7 +1,7 @@
 {
   "static_fields": [
     "Название страницы",
-    "Автор"
+	"Имя класса Page Object"
   ],
 
   "table_columns": [
@@ -16,8 +16,8 @@ $code
 $declaration {name: 'BDD Java', type: 'java'}
 $pattern
 {
-@Author("$eval(static['Автор'])")
-public class $eval(static['Название страницы']) {
+@Title("$eval(static['Название страницы'])")
+public class $eval(static['Имя класса Page Object']) {
 	
 	#startsection
 	@FindBy(xpath = "$eval(row['xpath'].replace(/"/g, '\\"'))")

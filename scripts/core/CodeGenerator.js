@@ -66,7 +66,7 @@ CodeGenerator.calcSection = function (text) {
             var str = eval(text.slice(index + 6, endIndex - 1).replace(/\?\n|\r/g, ''));
             text = text.slice(0, index) + str + text.slice(endIndex, text.length);
         }
-        result += text.slice(0, text.length - 2);
+        result += text.slice(1, text.length - 1);
     }
-    return result.slice(1, result.length);
+    return result.slice(1, result.length - 1);
 };
